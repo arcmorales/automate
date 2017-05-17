@@ -1,0 +1,18 @@
+{
+  "name": "sample-automation",
+  "version": "1.0.0",
+  "description": "sample automation of login page",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ara Morales",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "wdio-dot-reporter": "0.0.8",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-spec-reporter": "^0.1.0",
+    "webdriverio": "^4.8.0"
+  }
+}
