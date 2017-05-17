@@ -12,7 +12,7 @@ describe('Navigation to demo log in page', function() {
 });
 
 describe('Positive test to login page', function() {
-		it('should be able to login once valid user credentials are used', function () {
+		it('should be able to log in once valid user credentials are used', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('ara.morales');
@@ -29,14 +29,14 @@ describe('Negative test to login page', function() {
 			browser.url('https://arcmorales.github.io/demo/');
 			browser.pause(1500); 
 	});
-		it('should not be able to login with empty credentials', function () {
+		it('should not be able to log in with empty credentials', function () {
 				browser.click('button[type="submit"]');
 				browser.waitForVisible('.alert');
 				var errMsg = browser.getText('span.errormsg');
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-		it('should not be able to login with white spaces as credentials', function () {
+		it('should not be able to log in with white spaces as credentials', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('    ');
@@ -47,7 +47,7 @@ describe('Negative test to login page', function() {
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-		 it('should not be able to login with valid username but invalid password', function () {
+		 it('should not be able to log in with valid username but invalid password', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('A_morales');
@@ -58,7 +58,7 @@ describe('Negative test to login page', function() {
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-		 it('should not be able to login with invalid username but valid password', function () {
+		 it('should not be able to log in with invalid username but valid password', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('AaaAaaaTEST');
@@ -69,7 +69,7 @@ describe('Negative test to login page', function() {
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-			it('should not be able to login with non-existent username and non-existent password', function () {
+			it('should not be able to log in with non-existent username and non-existent password', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('RAndom');
@@ -80,7 +80,7 @@ describe('Negative test to login page', function() {
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-			it('should not be able to login with empty username and an existing password', function () {
+			it('should not be able to log in with empty username and an existing password', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('');
@@ -91,7 +91,7 @@ describe('Negative test to login page', function() {
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-			it('should not be able to login with valid username and empty password', function () {
+			it('should not be able to log in with valid username and empty password', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('A_morales');
@@ -102,7 +102,7 @@ describe('Negative test to login page', function() {
 				expect(errMsg).to.equal('Invalid username or password');
 		});
 
-			it('should not be able to login with valid username and password of wrong letter casing', function () {
+			it('should not be able to log in with valid username and password of wrong letter casing', function () {
 				var username = browser.element('#inputUser');
 				var password = browser.element('#inputPassword');
 				username.setValue('A_morales');
